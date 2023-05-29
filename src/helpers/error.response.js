@@ -28,7 +28,7 @@ class AuthFailureError extends ErrorResponse {
 class NotFoundError extends ErrorResponse {
   constructor(
     message = ReasonPhrases.NOT_FOUND,
-    statusCode = StatusCodes.NOT_FOUND
+    statusCode = StatusCode.NOT_FOUND
   ) {
     super(message, statusCode);
   }
@@ -37,7 +37,7 @@ class NotFoundError extends ErrorResponse {
 class ForbiddenError extends ErrorResponse {
   constructor(
     message = ReasonPhrases.FORBIDDEN,
-    statusCode = StatusCodes.FORBIDDEN
+    statusCode = StatusCode.FORBIDDEN
   ) {
     super(message, statusCode);
   }
