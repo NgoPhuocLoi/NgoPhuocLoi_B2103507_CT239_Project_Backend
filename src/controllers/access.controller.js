@@ -9,6 +9,7 @@ class AccessController {
   }
 
   static async login(req, res, next) {
+    console.log(req.body);
     new OKResponse({
       message: "Login successfully!",
       metadata: await AccessService.login(req.body),

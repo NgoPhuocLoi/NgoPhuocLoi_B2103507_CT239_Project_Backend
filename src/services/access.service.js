@@ -70,9 +70,9 @@ class AccessService {
       accessToken: generateAccessToken(payload),
       refreshToken: generateRefreshToken(payload),
     };
-
+    const { password: a, ...userInfo } = user;
     return {
-      user,
+      user: userInfo,
       tokens,
     };
   }
