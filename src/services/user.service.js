@@ -46,7 +46,7 @@ class UserService {
     });
     if (progress) {
       if (progress.completed || !completed) return;
-      console.log("123");
+
       return await prisma.topicDone.update({
         where: {
           id: progress.id,

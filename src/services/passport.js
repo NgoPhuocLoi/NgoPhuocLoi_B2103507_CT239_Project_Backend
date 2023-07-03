@@ -10,7 +10,6 @@ passport.serializeUser(function (user, done) {
 });
 
 passport.deserializeUser(function (user, done) {
-  console.log({ user });
   done(null, user);
 });
 passport.use(
@@ -34,7 +33,6 @@ passport.use(
       });
 
       if (existUser) {
-        console.log("Exist");
         const token = generateAccessToken(existUser);
         return done(null, { ...existUser, token });
       }

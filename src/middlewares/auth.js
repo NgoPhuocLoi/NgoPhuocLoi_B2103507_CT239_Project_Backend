@@ -3,7 +3,7 @@ const { asyncHandler } = require("../utils/asyncHandler");
 const { AuthFailureError } = require("../helpers/error.response");
 const authentication = asyncHandler(async (req, res, next) => {
   const bearerToken = req.headers.authorization;
-  console.log({ bearerToken });
+
   if (!bearerToken) throw new AuthFailureError("Missing token!");
 
   const accessToken = bearerToken.split(" ")[1];
