@@ -24,7 +24,7 @@ class QuestionService {
     const topicsId = (
       await prisma.topic.findMany({
         where: {
-          level: 1,
+          level,
           test: false,
         },
         select: {
